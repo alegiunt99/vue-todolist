@@ -69,6 +69,13 @@ const app = new Vue({
         taskIsDone(index) {
             
             this.doneToDo.push(index);
+
+        },
+
+        returnToDo(indexTD) {
+
+            this.todoList.push(indexTD);
+            
         }
     }
 });

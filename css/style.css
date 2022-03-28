@@ -91,6 +91,11 @@ main{
     border-radius: 10px;
 }
 
+#toDo-act i:hover{
+    color: greenyellow;
+    cursor:pointer;
+}
+
 #toDo-act p{
     font-size: 25px;
     color: #292968;

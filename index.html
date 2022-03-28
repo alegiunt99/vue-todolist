@@ -35,7 +35,7 @@
             <section id="doneAct-section">
                 <h2>Attività Concluse</h2>
                 <div id="done-act" v-for="(elements, index) in todoList" v-show="doneToDo.includes(index)">
-                    <p><i class="fa-solid fa-square-xmark"></i><s> {{elements.name}}</s></p>
+                    <p><i class="fa-solid fa-square-check"></i><s> {{elements.name}}</s></p>
                 </div>
             </section>
         </aside>
@@ -43,9 +43,9 @@
 
         <main>
             <div class="toDo-container">
-                <div id="toDo-act" v-for="(elements, index) in todoList" @click="taskIsDone(index)"
-                    v-show="!doneToDo.includes(index)">
-                    <p id="name-toDo"><i class="fa-solid fa-square-check"></i> {{elements.name}}</p>
+                <div id="toDo-act" v-for="(elements, index) in todoList" v-show="!doneToDo.includes(index)">
+                    <p id="name-toDo"><i class="fa-solid fa-square-xmark" @click="taskIsDone(index)"></i></i>
+                        {{elements.name}}</p>
                 </div>
 
                 <div id="add-act">
@@ -54,7 +54,7 @@
                     <div id="inputs-container">
                         <h2>Aggiungi un'attività</h2>
                         <label for="text-act">Nome attività</label>
-                        <input type="text" id="text-act" v-model="newToDo">
+                        <input type="text" maxlength="24" id="text-act" v-model="newToDo" @keyUp.enter="addToDoItem()">
 
                         <button type="submit" class="btn-classic" @click="addToDoItem()">Add</button>
 
