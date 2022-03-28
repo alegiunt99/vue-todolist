@@ -34,8 +34,8 @@
         <aside>
             <section id="doneAct-section">
                 <h2>Attività Concluse</h2>
-                <div id="done-act">
-                    <p></p>
+                <div id="done-act" v-for="(elements, index) in todoList" v-show="doneToDo.includes(index)">
+                    <p><i class="fa-solid fa-square-xmark"></i><s> {{elements.name}}</s></p>
                 </div>
             </section>
         </aside>
@@ -43,7 +43,8 @@
 
         <main>
             <div class="toDo-container">
-                <div id="toDo-act" v-for="(elements, index) in todoList">
+                <div id="toDo-act" v-for="(elements, index) in todoList" @click="taskIsDone(index)"
+                    v-show="!doneToDo.includes(index)">
                     <p id="name-toDo"><i class="fa-solid fa-square-check"></i> {{elements.name}}</p>
                 </div>
 

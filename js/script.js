@@ -31,6 +31,9 @@ const app = new Vue({
 
         newToDo: '',
 
+
+        doneToDo: [],
+
     },
     
     methods: {
@@ -61,6 +64,11 @@ const app = new Vue({
                 this.newToDo = '';
             }
             
+        },
+
+        taskIsDone(index) {
+            
+            this.doneToDo.push(index);
         }
     }
 });

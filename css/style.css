@@ -73,9 +73,9 @@ main{
 
 #doneAct-section #done-act{
     width: 87%;
-    margin: 20px auto;
+    margin: 5px auto;
     background-color: lightblue;
-    color: green;
+    color: darkred;
 }
 
 
@@ -123,3 +123,31 @@ main{
     box-shadow: 11px 13px 10px rgb(27 27 73);
 }
 
+#inputs-container label,
+#inputs-container button{
+    margin-top: 20px;
+}
+
+
+#inputs-container button{
+    width: 30%;
+}
+
+@media screen and (max-width: 380px) {
+
+    aside{
+        display: none;
+    }
+    
+    header h1{
+        font-size: 1.3rem;
+    }
+
+    .btn-classic{
+        font-size: 12px;
+    }
+
+    main{
+        padding-left: 0px;
+    }
+}
