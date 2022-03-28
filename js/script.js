@@ -17,21 +17,50 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
 
+const inputName = document.getElementById('text-act');
+
+
+
+
 const app = new Vue({
     el: '.container',
 
     data: {
-        todoList: [
-            {
-                text: '',
+        todoList: [],
 
-                done: true
-            }
-        ],
+
+        newToDo: '',
 
     },
-
+    
     methods: {
 
+        openInputs() {
+            const inputsCont = document.getElementById('inputs-container');
+
+            return inputsCont.style.display = 'flex';
+        },
+
+        addToDoItem() {
+
+            const newToDo = this.newToDo.trim();
+
+            const toDoObj = {
+
+                name: newToDo,
+
+                done: false,
+            }
+
+            const inputsCont = document.getElementById('inputs-container');
+
+            inputsCont.style.display = 'none';
+            if (newToDo.length > 0) {
+                this.todoList.push(toDoObj);
+
+                this.newToDo = '';
+            }
+            
+        }
     }
 });

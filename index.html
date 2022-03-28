@@ -43,23 +43,19 @@
 
         <main>
             <div class="toDo-container">
-                <div id="toDo-act">
-                    <p id="name-toDo"></p>
-                    <span id="date-toDo"></span>
+                <div id="toDo-act" v-for="(elements, index) in todoList">
+                    <p id="name-toDo"><i class="fa-solid fa-square-check"></i> {{elements.name}}</p>
                 </div>
 
                 <div id="add-act">
-                    <button id="open-source-btn"><i class="fa-solid fa-square-plus"></i></button>
+                    <button id="open-source-btn" @click="openInputs()"><i class="fa-solid fa-square-plus"></i></button>
 
                     <div id="inputs-container">
                         <h2>Aggiungi un'attività</h2>
                         <label for="text-act">Nome attività</label>
-                        <input type="text" id="text-act">
+                        <input type="text" id="text-act" v-model="newToDo">
 
-                        <label for="date-of-act">Data</label>
-                        <input type="date" name="date" id="date-of-act">
-
-                        <button type="submit" class="btn-classic">Add</button>
+                        <button type="submit" class="btn-classic" @click="addToDoItem()">Add</button>
 
                     </div>
                 </div>

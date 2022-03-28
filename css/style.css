@@ -22,6 +22,7 @@
 /* CONTENT  */ 
 
 header{
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,10 @@ header{
     background-color: rgb(27, 27, 73);
     color: white;
     padding: 0 20px;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .container{
@@ -38,16 +43,22 @@ header{
 }
 
 aside{
+    padding-top: 85px;
+    float: left;
     width: 300px;
-    height: calc(100vh - 85px);
     background-color: rgb(41, 41, 104);
+    position: fixed;
+    height: 100vh;
 }
 
 main{
-    width: calc(100vw - 300px);
+    width: 100vw;
     display: flex;
     justify-content: center;
     background-color: rgb(49, 49, 126);
+    padding-left: 300px;
+    min-height: 100vh;
+    padding-top: 85px;
 }
 
 #doneAct-section{
@@ -61,10 +72,10 @@ main{
 }
 
 #doneAct-section #done-act{
-    width: 100%;
+    width: 87%;
+    margin: 20px auto;
     background-color: lightblue;
     color: green;
-    padding: 5px 0px;
 }
 
 
@@ -105,8 +116,6 @@ main{
 
 #inputs-container {
     display: none;
-    position: absolute;
-    /* display: flex; */
     flex-direction: column;
     padding: 30px;
     background-color: rgb(190 190 231);
