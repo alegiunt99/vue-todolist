@@ -17,3 +17,21 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
 
+const app = new Vue({
+    el: '.container',
+
+    data: {
+        todoList: [
+            {
+                text: '',
+
+                done: true
+            }
+        ],
+
+    },
+
+    methods: {
+
+    }
+});

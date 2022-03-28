@@ -7,5 +7,110 @@
 
 /* UTILITIES */
 
+.btn-classic{
+    background-color: rgb(143, 143, 196);
+    border-radius: 25px;
+    padding: 10px 15px;
+    color: darkblue;
+}
+
+.btn-classic:hover{
+    background-color: rgb(88, 88, 121);
+    cursor: pointer;
+}
 
 /* CONTENT  */ 
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    background-color: rgb(27, 27, 73);
+    color: white;
+    padding: 0 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+aside{
+    width: 300px;
+    height: calc(100vh - 85px);
+    background-color: rgb(41, 41, 104);
+}
+
+main{
+    width: calc(100vw - 300px);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(49, 49, 126);
+}
+
+#doneAct-section{
+    width: 85%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#doneAct-section h2{
+    color: lightblue;
+}
+
+#doneAct-section #done-act{
+    width: 100%;
+    background-color: lightblue;
+    color: green;
+    padding: 5px 0px;
+}
+
+
+.toDo-container{
+    width: 60%;
+    margin: 80px auto;
+}
+
+#toDo-act{
+    background-color: rgb(143, 143, 196);
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+#toDo-act p{
+    font-size: 25px;
+    color: #292968;
+}
+
+#toDo-act span{
+    font-size: 17px;
+    color: #4c4e91;
+}
+
+#add-act #open-source-btn{
+    border: none;
+    background-color: transparent;
+    color: rgb(143, 143, 196);
+    font-size: 35px;
+}
+
+#add-act #open-source-btn:hover{
+    color: rgb(103, 103, 141);
+    cursor: pointer;
+}
+
+
+#inputs-container {
+    display: none;
+    position: absolute;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(190 190 231);
+    border-radius: 20px;
+    box-shadow: 11px 13px 10px rgb(27 27 73);
+}
+

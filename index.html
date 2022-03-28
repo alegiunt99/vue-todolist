@@ -20,9 +20,62 @@
 </head>
 
 <body>
-    <!-- <i class="fa-solid fa-square-check"></i> -->
 
-    <!-- <i class="fa-solid fa-square-xmark"></i> -->
+    <header>
+        <h1>TO DO LIST</h1>
+
+        <div class="buttons">
+            <button id="sub" title="Premi per iscriverti" class="btn-classic">Iscriviti</button>
+            <button id="login-btn" title="Premi per accedere" class="btn-classic">Accedi</button>
+        </div>
+
+    </header>
+    <div class="container">
+        <aside>
+            <section id="doneAct-section">
+                <h2>Attività Concluse</h2>
+                <div id="done-act">
+                    <p></p>
+                </div>
+            </section>
+        </aside>
+
+
+        <main>
+            <div class="toDo-container">
+                <div id="toDo-act">
+                    <p id="name-toDo"></p>
+                    <span id="date-toDo"></span>
+                </div>
+
+                <div id="add-act">
+                    <button id="open-source-btn"><i class="fa-solid fa-square-plus"></i></button>
+
+                    <div id="inputs-container">
+                        <h2>Aggiungi un'attività</h2>
+                        <label for="text-act">Nome attività</label>
+                        <input type="text" id="text-act">
+
+                        <label for="date-of-act">Data</label>
+                        <input type="date" name="date" id="date-of-act">
+
+                        <button type="submit" class="btn-classic">Add</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+
+
+    </div>
 </body>
 
 </html>
+
+
+
+<!-- <i class="fa-solid fa-square-check"></i> -->
+<!-- <i class="fa-solid fa-square-xmark"></i> -->
